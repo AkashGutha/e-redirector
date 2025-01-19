@@ -8,11 +8,10 @@ export function middleware(request: NextRequest) {
     if (request.headers.get('host') === 'e-redirector.vercel.app') {
         // divide the url into domain and path
         const url = new URL(request.url)
-        console.log(url)
-        console.log(request)
+        const path = url.pathname
 
         // redirect to the new domain
-        return NextResponse.redirect('https://entrepreneurshipstudio.com/' + request.nextUrl, {
+        return NextResponse.redirect('https://entrepreneurshipstudio.com/' + path, {
             status: 301
         })
     }
