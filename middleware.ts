@@ -11,7 +11,7 @@ export function middleware(request: NextRequest) {
         const path = url.pathname
 
         // redirect to the new domain
-        return NextResponse.redirect('https://entrepreneurshipstudio.com/' + path, {
+        return NextResponse.redirect('https://www.everythingstartups.io/' + path, {
             status: 301
         })
     }
