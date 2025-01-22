@@ -5,7 +5,7 @@ import type { NextRequest } from 'next/server'
 export function middleware(request: NextRequest) {
 
     // Redirect all requests from this domain to the new domain(es)
-    if (request.headers.get('host') === 'e-redirector.vercel.app') {
+    if (request.headers.get('host') === 'entrepreneurshipstudio.com') {
         // divide the url into domain and path
         const url = new URL(request.url)
         const path = url.pathname
